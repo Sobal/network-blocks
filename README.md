@@ -6,7 +6,7 @@ This is not a contract that exists and is dummy data in order to bypass subgraph
 
 ## Deployed Subgraphs
 
-| Network | Starting Block | Subgraph URL                                                                 |
-|---------|----------------|------------------------------------------------------------------------------|
-| Neon    | 206166057      | http://neon-subgraph.sobal.fi/sobal-neon-blocks                              |
-| Base    | 2029566        | https://api.studio.thegraph.com/query/50526/sobal-base-blocks/version/latest |
+| Network | Starting Block | Starting Timestamp           | Subgraph URL                                                                 |
+|---------|----------------|------------------------------|------------------------------------------------------------------------------|
+| Neon    | 209880000      | Aug-06-2023 10:54:29 PM +UTC | http://neon-subgraph.sobal.fi/sobal-neon-blocks                              |
+| Base    | 2287000        | Aug-06-2023 11:09:07 PM +UTC | https://api.studio.thegraph.com/query/50526/sobal-base-blocks/version/latest |
