@@ -5,9 +5,9 @@
     "codegen": "graph codegen",
     "build": "graph build",
     "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/ethereum-blocks",
-    "create:neon": "graph create sobal/sobal-blocks --node https://thegraph.neonevm.org/deploy/",
+    "create:neon": "graph create sobal/sobal-neon-blocks --node https://thegraph.neonevm.org/deploy/",
     "deploy:base": "graph deploy --studio sobal-base-blocks",
-    "deploy:neon": "graph deploy sobal/sobal-blocks --ipfs https://ipfs.neonevm.org/ --node https://thegraph.neonevm.org/deploy/"
+    "deploy:neon": "graph deploy sobal/sobal-neon-blocks --ipfs https://ipfs.neonevm.org/ --node https://thegraph.neonevm.org/deploy/"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.54.0",
