@@ -1,18 +1,18 @@
-specVersion: 0.0.2
-description: Indexing all Ethereum Block data
-repository: https://github.com/blocklytics/ethereum-blocks
+specVersion: 0.0.4
+description: Indexing all Chain Block data
+repository: https://github.com/Sobal/network-blocks
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: ConverterRegistryContract
-    network: rinkeby
+    network: base
     source:
       address: "0x0ddff327ddf7fe838e3e63d02001ef23ad1ede8e"
       abi: ConverterRegistryContract
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
         - ConverterAddition
