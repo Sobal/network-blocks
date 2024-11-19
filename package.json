@@ -5,10 +5,11 @@
     "codegen": "graph codegen",
     "build": "graph build",
     "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/ethereum-blocks",
-    "create:neon": "graph create sobal/sobal-neon-blocks --node https://neon-subgraph.sobal.fi/deploy/",
-    "remove:neon": "graph remove sobal/sobal-neon-blocks --node https://neon-subgraph.sobal.fi/deploy/",
+    "auth:neon": "eval $(grep '^NEON_GRAPH_API_KEY' .env) && graph auth https://thegraph-secured.neonevm.org/deploy/ $NEON_GRAPH_API_KEY",
+    "create:neon": "graph create sobal/sobal-neon-blocks --node https://thegraph-secured.neonevm.org/deploy/",
+    "remove:neon": "graph remove sobal/sobal-neon-blocks --node https://thegraph-secured.neonevm.org/deploy/",
     "deploy:base": "graph deploy --studio sobal-base-blocks",
-    "deploy:neon": "graph deploy sobal/sobal-neon-blocks --ipfs https://neon-subgraph.sobal.fi/ --node https://neon-subgraph.sobal.fi/deploy/"
+    "deploy:neon": "eval $(grep '^NEON_GRAPH_API_KEY' .env) && graph deploy sobal/sobal-neon-blocks --ipfs https://ipfs-secured.neonevm.org/ --node https://thegraph-secured.neonevm.org/deploy/ --headers='{\"Authorization\": \"Bearer '$NEON_GRAPH_API_KEY'\"}'"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.54.0",
